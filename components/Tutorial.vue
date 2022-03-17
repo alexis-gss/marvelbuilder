@@ -3,7 +3,7 @@
       <div class="loading__modal" v-show="loadingModal">
         <div class="loading__modal-container">
           <h3>Recovering data in progress...</h3>
-          <p>Loading : <span class="loading__count">{{loading}}</span>/1493.</p>
+          <p>Loading : <span class="loading__count">{{loading}}</span>/1560.</p>
         </div>
       </div>
 
@@ -140,9 +140,9 @@ async created() { //Récupère l'ensemble des héros disponibles
       let ts = Date.now();
       let hash = MD5(ts + apiKeyPrivate + apiKeyPublic);
 
-      for(let s = 0 ; s <= 1500 ; s += 100){ //Récupère le nom, l'id, la description et le thumbnail pour chaque héros (1493)
+      for(let s = 0 ; s <= 1600 ; s += 100){ //Récupère le nom, l'id, la description et le thumbnail pour chaque héros (1560)
         this.loading = s
-        if(s === 1500){
+        if(s === 1600){
           this.loadingModal = false;
         }
         const requete = await fetch("https://gateway.marvel.com/v1/public/characters?offset=" + s + "&limit=100ts=" + ts + "&apikey=" + apiKeyPublic + "&hash=" + hash + "");
@@ -161,7 +161,6 @@ async created() { //Récupère l'ensemble des héros disponibles
   },
   mounted() { // Récupère l'équipe enregistré en localStorage
     if(localStorage.team && localStorage.team.length > 2){
-      console.log(localStorage.team.length)
       this.checkEmptyTeam = false;
       this.team = JSON.parse(localStorage.getItem("team"))
       document.getElementById('teamName').value = localStorage.getItem("teamName")

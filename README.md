@@ -1,52 +1,69 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c8e43be0-64e9-449e-b3f5-90e2bce5245e/deploy-status)](https://app.netlify.com/sites/marvelbuilder/deploys)
+# marvelbuilder
 
-# marvel-api
+## Build Setup
 
-![marvelbuilder](https://user-images.githubusercontent.com/44983598/113455428-df304b00-940a-11eb-9f71-f1cf5fc4e5ef.png)
+```bash
+# install dependencies
+$ npm install
 
-## Guide d’utilisation
-### Installation
-```
-npm install
-```
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-### Compile et recharge pour le développement
-```
-npm run serve
-```
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-### Compile et minifie pour la production
-```
-npm run build
+# generate static project
+$ npm run generate
 ```
 
-### Vous pouvez également accéder à l'application à l’aide du lien suivant :
-https://marvelbuilder.netlify.app
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Listes des fonctionnalités
+## Special Directories
 
-Cette application vous propose de consulter les fiches des personnages Marvel, vous y retrouverez différentes informations telles que le nom, la description et une illustration. De plus, vous pouvez apercevoir le comic le plus récent, dans lequel le héros est apparu, mais aussi le plus ancien. Vous pouvez également composer votre équipe de personnages et la sauvegarder afin de ne pas la perdre.
+You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
-### Outils de recherche :
+### `assets`
 
-À l’aide de la barre de recherche, vous pouvez chercher un mot présent dans le nom et/ou dans la description d'un/des personnage(s). Il faudra pour cela insérez au moins 3 caractères dans cette barre de recherche. Les héros affichés seront donc triés par rapport à cette dernière.
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
-Vous avez également la possibilité d’afficher 10 personnages aléatoirement, à l’aide du bouton prévu à cet effet.
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
 
-Vous pouvez combiner les deux fonctionnalités précédentes pour mélanger l'ordre d'affichage des personnages comprenant les mots-clés inséré dans la barre de recherche.
+### `components`
 
-### Affichage des informations des personnages :
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
-Une fois que vous avez trouvé le personnage qui vous plaît, vous pouvez consulter plus de détails à propos de celui-ci, l’affichage classique vous montre son nom et une illustration. En cliquant sur ce héros, une fenêtre modale apparaîtra. Cette dernière contient des informations supplémentaires sur ce personnage telles que : son nom, son illustration, une description, le comic le plus récent et le plus ancien dans lesquels le titre, la date et la description des comics seront affichés.
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
-Vous avez également la possibilité d’ajouter le personnage à votre équipe personnalisée, à l’aide du bouton prévu à cet effet. Une fois que vous avez terminé l'analyse de ce héro, vous pouvez fermer la fenêtre modale.
+### `layouts`
 
-### Gestion de votre équipe de personnages :
+Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
-Diverses fonctionnalités vous sont disponibles pour gérer votre équipe. Vous pouvez supprimer un héros mais aussi le déplacer, à l’aide des flèches de déplacement, et ainsi, changer l'ordre des personnages. Enfin, vous avez la possibilité de vider l’intégralité de votre équipe, si vous voulez repartir de zéro.
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
-Une fois votre équipe faite, vous pouvez donner un nom à cette dernière et la sauvegarder afin de ne pas la perdre. De cette manière, lors de votre prochaine visite, vous retrouverez votre équipe précédemment créée.
 
-## License
+### `pages`
 
-Data provided by Marvel. © 2014 Marvel
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+
+### `plugins`
+
+The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+
+### `static`
+
+This directory contains your static files. Each file inside this directory is mapped to `/`.
+
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+### `store`
+
+This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
