@@ -7,9 +7,12 @@
 	--color2: #fff;
 	--color3: #191919;
     --color4: #EF3535;
+    --shadow: 0px 10px 10px -9px rgba(0, 0, 0, 0.6);
 }
 /*Genral*/
 html,body{
+    margin: 0;
+    padding: 0;
 	scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
@@ -25,9 +28,8 @@ a:hover{
 .main{
     display: flex;
     max-width: 125rem;
-    width: 100%;
     margin: 0 auto;
-    padding: 3rem;
+    padding: 3rem 3rem 0 3rem;
 }
 ul{
     list-style-type: none;
@@ -50,6 +52,7 @@ input:focus, button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: var(--shadow);
 }
 .header__title{
     font-size: 50px;
@@ -115,6 +118,7 @@ input:focus, button:focus {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    margin: 0;
 }
 .item__list{
     margin: 0 .5rem;
@@ -123,23 +127,25 @@ input:focus, button:focus {
     list-style-type: none;
     border-top: .6rem solid var(--color1);
     margin-bottom: 3rem;
-    box-shadow: 0px 10px 10px -9px rgb(0 0 0/ 60%);
+    box-shadow: var(--shadow);
 }
 .item__div{
+    width: 250px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 .item__name{
     padding: 1rem;
     margin: 0;
-    width: 250px;
+    width: calc(100% - 2rem);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .item__img{
     height: 250px;
-    width: 250px;
-    transform: translateY(-1px);
+    width: 100%;
 }
 /*Team*/
 .team{
@@ -151,6 +157,7 @@ input:focus, button:focus {
     top: 10px;
 }
 .team__list-container{
+    margin: 0;
     padding: 0;
     list-style-type: none;
 }
@@ -169,6 +176,7 @@ input:focus, button:focus {
     border: none;
     width: 50%;
     height: 29px;
+    padding: 0 .5rem;
 }
 .team__btn{
     text-align: center;
