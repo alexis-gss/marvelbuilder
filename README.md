@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c8e43be0-64e9-449e-b3f5-90e2bce5245e/deploy-status)](https://app.netlify.com/sites/marvelbuilder/deploys)
-
 # marvel-api
 
 ![marvelbuilder](https://user-images.githubusercontent.com/44983598/113455428-df304b00-940a-11eb-9f71-f1cf5fc4e5ef.png)
@@ -10,18 +8,18 @@
 npm install
 ```
 
-### Compile et recharge pour le développement
-```
-npm run serve
-```
-
 ### Compile et minifie pour la production
 ```
 npm run build
 ```
 
+### Compile et recharge pour le développement
+```
+npm run dev
+```
+
 ### Vous pouvez également accéder à l'application à l’aide du lien suivant :
-https://marvelbuilder.netlify.app
+https://www.alexis-gousseau.com/data/Marvelbuilder/
 
 ## Listes des fonctionnalités
 
