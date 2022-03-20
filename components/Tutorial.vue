@@ -135,8 +135,8 @@ async created() { //Récupère l'ensemble des héros disponibles
       this.loadingModal = false;
     }
     else{
-      let apiKeyPrivate = "ec83233405e34d088daac39044b993316eeb8c4f";
-      let apiKeyPublic = "f8b60f51b4ea0d18688590821111c2f9";
+      let apiKeyPrivate = "96d0839264d3ef46eac9f5e00d453ab15a5d4ead";
+      let apiKeyPublic = "212ec27bd874218eebb4bf80be8e0529";
       let ts = Date.now();
       let hash = MD5(ts + apiKeyPrivate + apiKeyPublic);
 
@@ -145,8 +145,9 @@ async created() { //Récupère l'ensemble des héros disponibles
         if(s === 1600){
           this.loadingModal = false;
         }
-        const requete = await fetch("https://gateway.marvel.com/v1/public/characters?offset=" + s + "&limit=100ts=" + ts + "&apikey=" + apiKeyPublic + "&hash=" + hash + "");
+        const requete = await fetch("https://gateway.marvel.com/v1/public/characters?offset=" + s + "&limit=100&ts=" + ts + "&apikey=" + apiKeyPublic + "&hash=" + hash + "");
         var resJson = await requete.json();
+        
         for(let i = 0 ; i < resJson.data.results.length ; i ++){
           if(resJson.data.results[i].description === ""){
             resJson.data.results[i].description = "No description for this character";
