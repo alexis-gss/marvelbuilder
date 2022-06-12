@@ -197,12 +197,12 @@ async created() { //Récupère l'ensemble des héros disponibles
       this.show.push(id);
     },
     async getComics(id){ //Permet de récupérer les comics dans lequel le héros apparaît
-      let apiKeyPrivate = "ec83233405e34d088daac39044b993316eeb8c4f";
-      let apiKeyPublic = "f8b60f51b4ea0d18688590821111c2f9";
+      let apiKeyPublic = "212ec27bd874218eebb4bf80be8e0529";
+      let apiKeyPrivate = "96d0839264d3ef46eac9f5e00d453ab15a5d4ead";
       let ts = Date.now();
       let hash = MD5(ts + apiKeyPrivate + apiKeyPublic);
     
-      const response = await fetch("https://gateway.marvel.com/v1/public/characters/" + id + "/comics?limit=100ts=" + ts + "&apikey=" + apiKeyPublic + "&hash=" + hash + "");
+      const response = await fetch("https://gateway.marvel.com/v1/public/characters/" + id + "/comics?limit=100&ts=" + ts + "&apikey=" + apiKeyPublic + "&hash=" + hash + "");
       const dataComics = await response.json();
       const allComics = dataComics.data.results;
       
